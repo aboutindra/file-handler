@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
 
-app.post("/image", (req, res) => {
+app.post("/upload", (req, res) => {
   var storage = multer.diskStorage({
     destination: function(req, file, cb) {
       cb(null, '../uploads');
